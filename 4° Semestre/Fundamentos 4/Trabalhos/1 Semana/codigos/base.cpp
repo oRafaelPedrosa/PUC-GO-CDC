@@ -37,24 +37,30 @@ Decimal(int N)
 	
 	cout << Soma << endl;
 }
+QualquerBase(int N, int base1,int base2)
+{
+	int cont = 0;
+	int m=N;
+	while(N)
+	{
+		N = N/base2;
+		cont++;
+	}
+	int Aux, Soma = 0;
+	for(int i=0; i<cont; i++)
+	{
+		Aux = m%base2;
+		Soma += Aux* (pow(base1,i));
+		m = m/base2;
+	}
+	
+	cout << Soma << endl;
+}
+
+
 main ()
 {
-	INICIO:
-	int N, Opcao;
-	
-	cout << "[1] - DECIMAL -> BINARIO\n";
-	cout << "[2] - BINARIO -> DECIMAL\n";
-	cin >> Opcao;
-	cout << "QUAL O NUMERO: ";
-	cin >> N;
-	switch(Opcao)
-	{
-		case 1: Bin(N);
-			break;
-		case 2:
-			Decimal(Bin(N));
-				break;
-	}
-	goto INICIO;
-	
+	Decimal(1010);
+	Bin(10);
+	QualquerBase(0010,2,8);	
 }
