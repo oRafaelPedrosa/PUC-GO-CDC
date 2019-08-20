@@ -9,7 +9,7 @@ using namespace std;
 
 
 
-void QualquerBase_string(double N, long long int base1, long long int base2)
+void QualquerBase_string(long double N, long long int base1, long long int base2)
 {
 
     //string resultado =  to_string(N);
