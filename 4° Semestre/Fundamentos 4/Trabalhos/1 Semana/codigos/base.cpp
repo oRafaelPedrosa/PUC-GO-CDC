@@ -9,7 +9,7 @@ using namespace std;
 
 
 
-void QualquerBase_string(double N, int base1, int base2)
+void QualquerBase_string(double N, long long int base1, long long int base2)
 {
 
     //string resultado =  to_string(N);
@@ -44,13 +44,80 @@ void QualquerBase_string(double N, int base1, int base2)
     }
 
     cout << Soma << endl;
+
 }
 
-
+ 
 int main ()
 {
-    //Decimal(1010);
-    //Bin(10);
-    //QualquerBase(0010,2,8);
-    QualquerBase_string(84.5,14,8);
+    long double N1;
+    int Opcao;
+	do
+	{
+		system("cls");
+		cout << "[1] - Binario -> Decimal\n";
+	 	cout << "[2] - Decimal -> Binario\n";
+	 	cout << "[3] - Decimal -> Hexa\n";
+	 	cout << "[4] - Decimal -> Octal\n";
+	 	cout << "[5] - Octal -> Decimal\n";
+	 	cout << "[6] - De X para Y\n";
+	 	cout << "[0] - Sair\n";
+	 	cin >> Opcao;
+	 	
+	 	system("cls");
+	 	
+	 	
+	 	switch (Opcao)
+	 	{
+	 		default:
+	 			cout << "Insira um numero de 0 a 6\n";
+	 			system("pause");
+	 			break;
+			
+			case 1:
+			 	cout << "Numero a converter: ";
+	 			cin >> N1;
+	 			QualquerBase_string(N1,2,10);
+	 			break;
+	 		
+	 		case 2:
+	 			cout << "Numero a converter: ";
+	 			cin >> N1;
+	 			QualquerBase_string(N1,10,2);
+	 			break;
+	 		
+	 		case 3:
+	 			cout << "Numero a converter: ";
+	 			cin >> N1;
+	 			QualquerBase_string(N1,10,16);
+	 			break;
+	 			
+	 		case 4:
+	 			cout << "Numero a converter: ";
+	 			cin >> N1;
+	 			QualquerBase_string(N1,10,8);
+	 			break;
+			
+			case 5:
+				cout << "Numero a converter: ";
+	 			cin >> N1;
+	 			QualquerBase_string(N1,8,10);
+	 			break;
+	 		
+			 case 6:
+	 			cout << "Numero a converter: ";
+	 			cin >> N1;
+	 			int X, Y;
+	 			cout << "Da base (X) = ";
+	 			cin >> X;
+	 			cout << "Para base (Y) = ";
+	 			cin >> Y;
+	 			QualquerBase_string(N1,X,Y);
+	 			break;
+			
+			case 0: return 0;
+		}
+		system("pause");
+		cout << endl;
+	}while(Opcao);
 }
