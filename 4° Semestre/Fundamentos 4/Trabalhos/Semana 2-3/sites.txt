@@ -2,3 +2,6 @@ https://pt.wikipedia.org/wiki/V%C3%ADrgula_flutuante
 https://www.youtube.com/watch?v=COUZh3vAbMM
 https://www.youtube.com/watch?v=89u1I1a9Qm4
 https://www.hardware.com.br/comunidade/conversao-binaria/321311/
+
+NOTES: 
+  IEEE754
