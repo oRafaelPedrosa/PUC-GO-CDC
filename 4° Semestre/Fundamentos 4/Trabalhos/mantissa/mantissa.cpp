@@ -126,6 +126,28 @@ int main()
     cout << endl;
     cout << "Final: ";
     cout << final1 << endl;
+    cout << endl;
+    cout << "Correção: ";
+    for(int i=0; i<final1.size();i++)
+    {
+        if(final1[i]==',')
+        {
+            char aux;
+            char a=final1[i];
+            char b=final1[i-1];
+
+            aux=a;
+            a=b;
+            b=aux;
+            final1[i]=a;
+            final1[i-1]=b;
+
+        }
+    }
+
+    cout << final1 << endl;
 
 }
+
+
 
