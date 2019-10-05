@@ -7,7 +7,7 @@ section .data
         pedido2 db "Digite sua senha(2): "
         pedido2_tam equ $ - pedido2
         
-        resultado db "Sua senha e: "
+        resultado db "Sua senha codificada e: "
         resultado_tam equ $ - resultado
         
         
@@ -21,6 +21,7 @@ section .data
 
 section .bss
 
+        ;buffers
         senha resb senha_max
         senha2 resb senha2_max
         
@@ -34,7 +35,7 @@ main:
 
     ;inicio
 
-        ;BLOCO 1
+        
         ;escreve msg pedindo senha
 
         mov eax, 4                      ;escreve
@@ -95,6 +96,7 @@ main:
 
         inc esi
         cmp esi, [senha_tam]
+        ;call validar_senha
         jp validar_senha
 
         ; codigicar
